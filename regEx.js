@@ -32,7 +32,7 @@
 
 // Task 2.3
 
-// const REGEXP = /abc/;
+// const REGEXP = /[^<>]<.*?>/gi;
 // let str = '<> <a href="/"> <input type="radio" checked> <b>';
-// str.match(REGEXP);
+// console.log(str.match(REGEXP));
 // '<a href="/">', '<input type="radio" checked>', "<b>";
