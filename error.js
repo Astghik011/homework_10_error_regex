@@ -102,7 +102,20 @@ let studentLabs = [
     },
 ];
 
-gradeLabs(studentLabs);
+const expected = 25;
+function gradeLabs(students){
+    try{
+        if(students.runLab(5) === expected){
+                return "Your answer is right."
+            } 
+            return "Your answer is wrong."
+        
+    } catch(err){
+        throw new Error(`${err.name}. "Error thrown"`)
+    }
+}
+
+console.log(gradeLabs(studentLabs));
 
 // Upon running the second example, the teacher gets TypeError: lab.runLab is not a function.
 // Add a try/catch block inside of gradeLabs to catch an exception if the runLab property is not defined.
